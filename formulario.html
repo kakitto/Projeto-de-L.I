@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patinhas sem lar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script language="javascript">
+        function aviso() {
+            const form = document.forms[0];
+            const nome = form.nome.value.trim();
+            const genero = form.genero.value;
+            const idade = form.idade.value;
+            const morada = form.Morada.value.trim();
+            const moradia = form.moradia.value;
+            const adotar = form.adotar.value;
+            const animal = form.animal.value.trim();
+            if (!nome) {
+                alert("Por favor, preencha o nome completo.");
+                return false;
+            }
+            if (!genero) {
+                alert("Por favor, selecione o gênero.");
+                return false;
+            }
+            if (idade === "op0") {
+                alert("Por favor, escolha uma idade.");
+                return false;
+            }
+            if (!morada) {
+                alert("Por favor, preencha a morada.");
+                return false;
+            }
+            if (!moradia) {
+                alert("Por favor, selecione o tipo de moradia.");
+                return false;
+            }
+            if (!adotar) {
+                alert("Por favor, selecione o tipo de animal a adotar.");
+                return false;
+            }
+            if (!animal) {
+                alert("Por favor, preencha o nome do animal.");
+                return false;
+            }
+            alert("Formulário enviado com sucesso!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="topnav">
+        <a href="mainpage.html" class="volta"><img src="https://r2.fivemanage.com/sKYOfrHiiPheq3r9CyyM9/imagem_2024-12-06_112609350-removebg-preview.png" alt="patinhas" width="50px"></a>
+        <a href="file:///C:/Users/carol/OneDrive/Ambiente%20de%20Trabalho/Redes/Patinhas%20sem%20lar/gatos.html" class="bar"><div class="texto">Adotar gatos</div></a>
+        <a href="caes.html" class="bar"><div class="texto">Adotar cães</div></a>
+        <a href="sobre.html" class="bar"><div class="texto">Sobre Nós</div></a>
+    </div>
+    <div class="container">  
+        <div class="form" name="adotar">
+            <form>
+                Nome completo:<input type="text" name="nome"><p>
+                Gênero:<input type="radio" name="genero" value="masc">Masculino
+                <input type="radio" name="genero" value="fem">Femenino<p>
+                Idade:<select name="idade">
+                    <option value="op0">Escolha uma idade</option>
+                    <option value="op1">18 - 29</option>
+                    <option value="op2">30 - 49</option>
+                    <option value="op3">50 - 69</option>
+                    <option value="op3">70+</option>
+                </select><p>
+                Morada:<input type="text" name="Morada"><p>
+                Tipo de moradia: <input type="radio" name="moradia" value="a">Apartamento
+                    <input type="radio" name="moradia" value="casa">Casa<p></p>
+                Adotar:<input type="radio" name="adotar" value="c">Cão
+                <input type="radio" name="adotar" value="g">Gato<p>
+                Nome do animal:<input type="text" name="animal"><p> 
+                <input type="submit" value="Confirmar" onclick="aviso()">
+                <input type="reset" value="Limpar">
+            </form>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="https://www.instagram.com/patinhassemlar/"><i class="icon ion-social-instagram"></i></a>
+                <a href="https://www.facebook.com/patinhassemlar/?locale=pt_PT"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="mainpage.html">Pagina Principal</a></li>
+                <li class="list-inline-item"><a href="sobre.html">Sobre Nós</a></li>
+                <li class="list-inline-item"><a href="https://www.livroreclamacoes.pt/Inicio/">Livro de reclamações</a></li>
+                <li class="list-inline-item"><a href="termos.html">Termos e condições</a></li>
+                <li class="list-inline-item"><a href="politica.html">Politica de privacidade</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
